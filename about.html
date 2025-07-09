@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services</title>
+  <link rel="stylesheet" href="css/about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+<!-- Topbar -->
+<header class="topbar" id="topbar">
+  <div class="container">
+    <a href="index.html">
+      <img src="img/clarvo.png" class="logo" alt="Logo" />
+    </a>
+
+      
+  <!-- Desktop nav -->
+  <nav class="nav" id="navLinks">
+    <a href="pricing.html" >Pricing</a>
+    <a href="about.html" class="active" >About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="reviews.html">Reviews</a>
+  </nav>
+
+
+    <!-- Mobile menu toggle -->
+    <div class="mobile-menu-toggle">
+      <i class="fi fi-br-bars-staggered menu-icon open-icon"></i>
+      <i class="fi fi-sr-angle-double-left menu-icon close-icon" style="display: none;"></i>
+    </div>
+  </div>
+
+<!-- Mobile sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-close">
+      <i class="fi fi-sr-angle-double-left"></i>
+    </div>
+    
+
+    <nav class="sidebar-nav">
+      <a href="pricing.html"><i class="fi fi-rr-send-money"></i> Pricing</a>
+      <a href="about.html"><i class="fi fi-rr-user"></i> About</a>
+      <a href="portfolio.html"><i class="fi fi-rr-camera"></i> Portfolio</a>
+      <a href="reviews.html"><i class="fi fi-rr-star"></i> Reviews</a>
+    </nav>
+
+  </div>
+</header>
+
+
+
+<section class="modern-services">
+  <h2 class="services-heading">Our Services</h2>
+  <div class="services-grid">
+    <div class="service-item">
+      <img src="https://u-mercari-images.mercdn.net/photos/m36344726868_2.jpg" alt="VHS to Pendrive">
+      <div class="service-text">
+        <h3>VHS to Pendrive</h3>
+        <p>Convert old VHS tapes to modern USB formats with high-quality digitization.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="https://cdn.mos.cms.futurecdn.net/qrnaga7LrBvHEXdGsuyPXh.jpg" alt="Drone Coverage">
+      <div class="service-text">
+        <h3>Drone Coverage</h3>
+        <p>Capture cinematic aerial footage using professional drone equipment.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgg7BH-iJLZrBB_rPO-gZvS4m4qgVL-X-qBw&s" alt="Video Shooting">
+      <div class="service-text">
+        <h3>Video Shooting</h3>
+        <p>Event and commercial video shooting with experienced videographers.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/014/491/878/small_2x/live-streaming-symbol-set-online-broadcast-icon-the-concept-of-live-streaming-for-selling-on-social-media-png.png" alt="Live Streaming">
+      <div class="service-text">
+        <h3>Live Streaming</h3>
+        <p>Stream your events in real-time with smooth audio-video integration.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="https://images.news18.com/ibnlive/uploads/2021/08/sun-photo-16293134144x3.jpg" alt="Photography">
+      <div class="service-text">
+        <h3>Photography</h3>
+        <p>Capture memories with creative and high-resolution photography.</p>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="https://www.videoservice.pro/images/video-editing.jpg" alt="Editing">
+      <div class="service-text">
+        <h3>Editing</h3>
+        <p>Professional editing for videos, trailers, and cinematic sequences.</p>
+      </div>
+    </div>
+
+
+
+    
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const serviceItems = document.querySelectorAll('.service-item');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show'); // for reverse on scroll-up
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  serviceItems.forEach(item => observer.observe(item));
+</script>
+
+
+</body>
+</html>

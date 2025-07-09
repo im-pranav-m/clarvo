@@ -1,0 +1,338 @@
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .logo {
+    height: 80px;
+    margin: -10px 0 -20px 0;
+  }
+
+  .hero-content h1 {
+    font-family: "Bree Serif", serif;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .hero-content p {
+    font-family: "Homemade Apple", cursive;
+    font-optical-sizing: auto;
+    margin-top: 10px;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 17px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .cta-button {
+    margin-top: 30px;
+    padding: 10px 20px;
+  }
+
+  .hero-image {
+    height: 100vh !important; /* Force full screen height */
+    object-fit: cover;
+    object-position: 40% center; /* Keep the right shift */
+  }
+
+  .hero {
+    min-height: 100vh !important; /* Force full screen height */
+    height: 100vh; /* Ensure it takes full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content-section h2 {
+    font-size: 28px;
+  }
+
+  .content-section p {
+    font-size: 16px;
+    max-width: 90%; /* Slightly wider on mobile */
+  }
+}
+
+/* Desktop adjustments remain unchanged */
+@media (min-width: 769px) {
+  .mobile-menu-toggle {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #292929;
+}
+
+/* Hide scrollbar for all browsers */
+html {
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+}
+
+.nav a.active {
+  color: #f8f8f8;
+  text-shadow: 0 0 10px #fff;
+  transform: scale(1.1);
+
+}
+.nav a.active::after {
+  transform: scaleX(1);
+}
+
+
+
+.topbar {
+  background-color: #111;
+  padding: 10px 20px;
+  position: relative;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  height: 120px;
+  margin: -20px 0 -35px 0;
+  transition: filter 0.3s ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.4));
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  position: relative;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  color: #f8f6f096;
+  margin-left: 25px;
+  font-weight: 500;
+  display: inline-block;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.2s ease-in-out;
+}
+
+.nav a:hover {
+  color: #f8f8f8;
+  text-shadow: 0 0 8px #ffffffaa;
+  transform: scale(1.1);
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #f8f8f8;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  transform: scaleX(1);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.menu-icon {
+  color: #ffffff;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 200px;
+  height: 25vh;
+  background-color: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease;
+  z-index: 1001;
+  border-bottom-left-radius: 20px;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 1002;
+  cursor: pointer;
+}
+
+.sidebar-close i {
+  font-size: 22px;
+  color: #fff;
+  transform: rotate(180deg);
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.sidebar-nav a {
+  text-decoration: none;
+  color: #f8f6f096;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.3s, text-shadow 0.3s, transform 0.2s ease-in-out;
+}
+
+.sidebar-nav a:hover {
+  color: #f8f8f8;
+  text-shadow: 0 0 8px #ffffffaa;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .logo {
+    height: 80px;
+    margin: -10px 0 -20px 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-menu-toggle,
+  .sidebar {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* Overall section styling */
+.modern-services {
+  padding: 60px 20px;
+  background-color: #111;
+  color: white;
+}
+
+.services-heading {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-family: "Bree Serif", serif;
+  color: #fdfdfd;
+}
+
+/* Grid container for service cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+/* Service card styling */
+.service-item {
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Card image styling */
+.service-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Text container within each card */
+.service-text {
+  padding: 15px;
+}
+
+.service-text h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.service-text p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .services-heading {
+    font-size: 28px;
+  }
+}
